@@ -181,6 +181,22 @@ Join the MovieMonthly community today and never miss out on the latest and great
     <input type="submit" value="Submit">
   </form>
 </div>
+<div class="filmslump">
+  <h1>Har du svårt att välja film?</h1>
+    <p>Tryck på knappen så slumpas en av våra 10 rekommenderade filmer du kan kolla på.</p>
+    <form method="POST">
+        <input type="submit" name="slumpa" value="Slumpa filmnummer">
+    </form>
+    <p>
+        <?php
+        if (isset($_POST['slumpa'])) {
+            // Anropar funktionen för slumpat filmnummer
+            $filmnummer = slumpmässigt_filmnummer();
+            echo "Film " . $filmnummer;
+        }
+        ?>
+    </p>
+  </div>
   <!-- Footer -->
   <footer class="container-fluid">
     <div class="row">
