@@ -209,6 +209,26 @@ Join the MovieMonthly community today and never miss out on the latest and great
     <input type="submit" value="Submit">
   </form>
 </div>
+<div class="filmslump">
+<h1>Har du svårt att välja ett nummer?</h1>
+    <p>Tryck på knappen så slumpas ett nummer mellan 1 och 5.</p>
+    <form method="POST">
+        <input type="submit" name="slumpa" value="Slumpa nummer">
+    </form>
+    <p>
+        <?php
+        function slumpmässigt_nummer_1_5() {
+            return rand(1, 5);
+        }
+
+        if (isset($_POST['slumpa'])) {
+            // Anropar funktionen för slumpat nummer mellan 1 och 5
+            $slumpNummer = slumpmässigt_nummer_1_5();
+            echo "Slumpat nummer: " . $slumpNummer;
+        }
+        ?>
+    </p>
+  </div>
   <!-- Footer -->
   <footer class="container-fluid">
     <div class="row">
