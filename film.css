@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 
+p { color: #14b8a6
+  ;
+
+}
 /* Navbar */
 .container {
     border-radius: 5px;
