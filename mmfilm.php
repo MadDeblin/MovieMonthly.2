@@ -182,8 +182,8 @@ Join the MovieMonthly community today and never miss out on the latest and great
   </form>
 </div>
 <div class="filmslump">
-<h1>Har du svårt att välja ett nummer?</h1>
-    <p>Tryck på knappen så slumpas ett nummer mellan 1 och 5.</p>
+<h1>Har du svårt att välja en film?</h1>
+    <p>Tryck på knappen så slumpas en film mellan våra 5 filmrekommenatdtioner.</p>
     <form method="POST">
         <input type="submit" name="slumpa" value="Slumpa nummer">
     </form>
@@ -196,7 +196,7 @@ Join the MovieMonthly community today and never miss out on the latest and great
         if (isset($_POST['slumpa'])) {
             // Anropar funktionen för slumpat nummer mellan 1 och 5
             $slumpNummer = slumpmässigt_nummer_1_5();
-            echo "Slumpat nummer: " . $slumpNummer;
+            echo "Kolla på filmrekommendation nummer: " . $slumpNummer;
         }
         ?>
     </p>
