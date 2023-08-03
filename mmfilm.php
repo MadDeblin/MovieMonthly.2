@@ -26,7 +26,16 @@
             <a class="nav-link" href="#Header">Home</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#Quotes">Quotes</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#Movies">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Comments">Comments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Random">Random</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Contact">Contact</a>
@@ -44,35 +53,6 @@
       </div>
     </div>
   </header>
-
-  <div class="Quote" id="Quote">
-		<!-- Random quotes från filmer funktion -->
-    <h3 id="quote-container">
-        <?php
-        include 'movie_quotes.php';
-        $randomIndex = array_rand($quotes);
-        echo $quotes[$randomIndex];
-        ?>
-    </h3>
-
-    <script>
-        function updateQuote() {
-            // AJAX request to get a new quote from the server
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("quote-container").innerText = this.responseText;
-                }
-            };
-            xhttp.open("GET", "movie_quotes_ajax.php", true);
-            xhttp.send();
-        }
-
-        // Update the quote every 5 seconds (5000 milliseconds)
-        setInterval(updateQuote, 3000);
-    </script>
-		
-	</div>
     
     
     <!---Titel Div -->
@@ -166,7 +146,6 @@ Join the MovieMonthly community today and never miss out on the latest and great
   </div>
 </section>
         </div>
-        <div class="Comment" id="Comment">
       <h3>Share your thoughts on this months movies! </h3>
          <form action="add_comment.php" method="POST">
           <label for="name">Name:</label>
@@ -211,13 +190,13 @@ Join the MovieMonthly community today and never miss out on the latest and great
     <input type="submit" value="Submit">
   </form>
 </div>
-<div class="Random" id="Random">
-<h1>Har du svårt att välja en film?</h1>
-    <p>Tryck på knappen så slumpas en film mellan våra 5 filmrekommenatdtioner.</p>
+<div class="filmslump">
+<h3>Har du svårt att välja en film?</h3>
+    <h3>Tryck på knappen så slumpas en film mellan våra 5 filmrekommenatdtioner.</h3>
     <form method="POST">
         <input type="submit" name="slumpa" value="Slumpa nummer">
     </form>
-    <p>
+    <h3>
         <?php
         function slumpmässigt_nummer_1_5() {
             return rand(1, 5);
@@ -229,7 +208,7 @@ Join the MovieMonthly community today and never miss out on the latest and great
             echo "Kolla på filmrekommendation nummer: " . $slumpNummer;
         }
         ?>
-    </p>
+    </h3>
   </div>
   <!-- Footer -->
   <footer class="container-fluid">
