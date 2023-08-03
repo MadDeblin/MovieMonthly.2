@@ -44,34 +44,6 @@
       </div>
     </div>
   </header>
-  <div class="quotes" id="quotes">
-		<!-- Random quotes från filmer funktion -->
-    <h3 id="quote-container">
-        <?php
-        include 'movie_quotes.php';
-        $randomIndex = array_rand($quotes);
-        echo $quotes[$randomIndex];
-        ?>
-    </h3>
-
-    <script>
-        function updateQuote() {
-            // AJAX request to get a new quote from the server
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("quote-container").innerText = this.responseText;
-                }
-            };
-            xhttp.open("GET", "movie_quotes_ajax.php", true);
-            xhttp.send();
-        }
-
-        // Update the quote every 5 seconds (5000 milliseconds)
-        setInterval(updateQuote, 3000);
-    </script>
-		
-	</div>
     
     
     <!---Titel Div -->
@@ -210,7 +182,7 @@ Join the MovieMonthly community today and never miss out on the latest and great
   </form>
 </div>
 <div class="filmslump">
-<h1>Har du svårt att välja en film?</h1>
+<h3>Har du svårt att välja en film?</h3>
     <h3>Tryck på knappen så slumpas en film mellan våra 5 filmrekommenatdtioner.</h3>
     <form method="POST">
         <input type="submit" name="slumpa" value="Slumpa nummer">
