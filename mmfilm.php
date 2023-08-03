@@ -44,7 +44,8 @@
       </div>
     </div>
   </header>
-  <div class="quotes" id="quotes">
+
+  <div class="Quote" id="Quote">
 		<!-- Random quotes från filmer funktion -->
     <h3 id="quote-container">
         <?php
@@ -165,6 +166,7 @@ Join the MovieMonthly community today and never miss out on the latest and great
   </div>
 </section>
         </div>
+        <div class="Comment" id="Comment">
       <h3>Share your thoughts on this months movies! </h3>
          <form action="add_comment.php" method="POST">
           <label for="name">Name:</label>
@@ -209,13 +211,13 @@ Join the MovieMonthly community today and never miss out on the latest and great
     <input type="submit" value="Submit">
   </form>
 </div>
-<div class="filmslump">
-<h3>Har du svårt att välja en film?</h3>
-    <h3>Tryck på knappen så slumpas en film mellan våra 5 filmrekommenatdtioner.</h3>
+<div class="Random" id="Random">
+<h1>Har du svårt att välja en film?</h1>
+    <p>Tryck på knappen så slumpas en film mellan våra 5 filmrekommenatdtioner.</p>
     <form method="POST">
         <input type="submit" name="slumpa" value="Slumpa nummer">
     </form>
-    <h3>
+    <p>
         <?php
         function slumpmässigt_nummer_1_5() {
             return rand(1, 5);
@@ -227,7 +229,7 @@ Join the MovieMonthly community today and never miss out on the latest and great
             echo "Kolla på filmrekommendation nummer: " . $slumpNummer;
         }
         ?>
-    </h3>
+    </p>
   </div>
   <!-- Footer -->
   <footer class="container-fluid">
