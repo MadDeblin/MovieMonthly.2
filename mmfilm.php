@@ -211,11 +211,11 @@ Join the MovieMonthly community today and never miss out on the latest and great
 </div>
 <div class="filmslump">
 <h1>Har du svårt att välja en film?</h1>
-    <p>Tryck på knappen så slumpas en film mellan våra 5 filmrekommenatdtioner.</p>
+    <h3>Tryck på knappen så slumpas en film mellan våra 5 filmrekommenatdtioner.</h3>
     <form method="POST">
         <input type="submit" name="slumpa" value="Slumpa nummer">
     </form>
-    <p>
+    <h3>
         <?php
         function slumpmässigt_nummer_1_5() {
             return rand(1, 5);
@@ -227,7 +227,7 @@ Join the MovieMonthly community today and never miss out on the latest and great
             echo "Kolla på filmrekommendation nummer: " . $slumpNummer;
         }
         ?>
-    </p>
+    </h3>
   </div>
   <!-- Footer -->
   <footer class="container-fluid">
