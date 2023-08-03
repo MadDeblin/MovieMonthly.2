@@ -46,13 +46,13 @@
   </header>
   <div class="quotes" id="quotes">
 		<!-- Random quotes från filmer funktion -->
-    <p id="quote-container">
+    <h3 id="quote-container">
         <?php
         include 'movie_quotes.php';
         $randomIndex = array_rand($quotes);
         echo $quotes[$randomIndex];
         ?>
-    </p>
+    </h3>
 
     <script>
         function updateQuote() {
