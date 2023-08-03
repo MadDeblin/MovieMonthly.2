@@ -26,7 +26,16 @@
             <a class="nav-link" href="#Header">Home</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#Quotes">Quotes</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#Movies">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Comments">Comments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Random">Random</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Contact">Contact</a>
