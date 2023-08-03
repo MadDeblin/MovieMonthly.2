@@ -44,6 +44,34 @@
       </div>
     </div>
   </header>
+  <div class="quotes" id="quotes">
+		<!-- Random quotes från filmer funktion -->
+    <h3 id="quote-container">
+        <?php
+        include 'movie_quotes.php';
+        $randomIndex = array_rand($quotes);
+        echo $quotes[$randomIndex];
+        ?>
+    </h3>
+
+    <script>
+        function updateQuote() {
+            // AJAX request to get a new quote from the server
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("quote-container").innerText = this.responseText;
+                }
+            };
+            xhttp.open("GET", "movie_quotes_ajax.php", true);
+            xhttp.send();
+        }
+
+        // Update the quote every 5 seconds (5000 milliseconds)
+        setInterval(updateQuote, 3000);
+    </script>
+		
+	</div>
     
     
     <!---Titel Div -->
