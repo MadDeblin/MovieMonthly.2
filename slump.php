@@ -1,5 +1,5 @@
 <?php
 function slumpmässigt_filmnummer() {
-    re rand(1, 5);
+    return rand(1, 5);
 }
 ?>
