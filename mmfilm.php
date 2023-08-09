@@ -40,39 +40,10 @@
   <header class="container-fluid" id="Header">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h1>MovieMonthly</h1>
+        <h1>MovieMonthlyyy</h1>
       </div>
     </div>
   </header>
-  <div class="quotes" id="quotes">
-		<!-- Random quotes från filmer funktion -->
-    <h3 id="quote-container">
-        <?php
-        include 'movie_quotes.php';
-        $randomIndex = array_rand($quotes);
-        echo $quotes[$randomIndex];
-        ?>
-    </h3>
-
-    <script>
-        function updateQuote() {
-            // AJAX request to get a new quote from the server
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("quote-container").innerText = this.responseText;
-                }
-            };
-            xhttp.open("GET", "movie_quotes_ajax.php", true);
-            xhttp.send();
-        }
-
-        // Update the quote every 5 seconds (5000 milliseconds)
-        setInterval(updateQuote, 3000);
-    </script>
-		
-	</div>
-    
     
     <!---Titel Div -->
     
@@ -174,8 +145,7 @@ Join the MovieMonthly community today and never miss out on the latest and great
           <textarea id="comment" name="comment" required></textarea>
           <button type="submit" name="submit">Submit</button>
       <div id="comments">
-          <?php include 'display_comments.php'; ?>
-      </div>
+          <div><p><strong>aaaa:</strong></p><p>aaa</p><p>2023-05-16 21:07:34</p></div><div><p><strong>asdasd:</strong></p><p>asdasd</p><p>2023-05-16 21:14:24</p></div><div><p><strong>asdasd:</strong></p><p>asdasd</p><p>2023-05-16 21:14:56</p></div><div><p><strong>aaasda:</strong></p><p>asdasd</p><p>2023-05-16 21:20:16</p></div><div><p><strong>test1:</strong></p><p>ada</p><p>2023-05-16 21:27:17</p></div><div><p><strong>test2:</strong></p><p>test med .php i slutet istället för .html för html filen</p><p>2023-05-16 21:33:19</p></div><div><p><strong>test2:</strong></p><p>test med .php i slutet istället för .html för html filen</p><p>2023-05-16 21:33:26</p></div><div><p><strong>test3:</strong></p><p>sda</p><p>2023-05-16 21:37:06</p></div><div><p><strong>test5:</strong></p><p>ändrade i php_comment filen</p><p>2023-05-16 21:38:28</p></div><div><p><strong>test6:</strong></p><p>asdasdas</p><p>2023-05-16 21:41:52</p></div><div><p><strong>test56:</strong></p><p>hjvgjkghkjh</p><p>2023-05-16 22:09:03</p></div>      </div>
 
 
       </form>
@@ -209,41 +179,8 @@ Join the MovieMonthly community today and never miss out on the latest and great
     <input type="submit" value="Submit">
   </form>
 </div>
-<div class="filmslump">
-<h3>Har du svårt att välja en film?</h3>
-    <h3>Tryck på knappen så slumpas en film mellan våra 5 filmrekommenatdtioner.</h3>
-    <form method="POST">
-        <input type="submit" name="slumpa" value="Slumpa nummer">
-    </form>
-    <h3>
-        <?php
-        function slumpmässigt_nummer_1_5() {
-            return rand(1, 5);
-        }
 
-        if (isset($_POST['slumpa'])) {
-            // Anropar funktionen för slumpat nummer mellan 1 och 5
-            $slumpNummer = slumpmässigt_nummer_1_5();
-            echo "Kolla på filmrekommendation nummer: " . $slumpNummer;
-        }
-        ?>
-    </h3>
-  </div>
-  <!-- Footer -->
-  <footer class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <p>&copy; 2023 MovieMonthly. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    </div>
 </body>
 </html>
-
                 
             
